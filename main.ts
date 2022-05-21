@@ -1,3 +1,5 @@
+let pocet_tlesnuti = 0
+let vzdialenost = 0
 input.onSound(DetectedSound.Loud, function () {
     if (input.soundLevel() > 140) {
         pocet_tlesnuti += 1
@@ -10,9 +12,6 @@ input.onSound(DetectedSound.Loud, function () {
         }
     }
 })
-let vzdialenost = 0
-let pocet_tlesnuti = 0
-pocet_tlesnuti = 0
 basic.forever(function () {
     if (pocet_tlesnuti == 1) {
         vzdialenost = Rover.Ultrasonic()
